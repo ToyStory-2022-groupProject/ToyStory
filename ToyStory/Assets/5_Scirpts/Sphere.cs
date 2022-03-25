@@ -56,7 +56,7 @@ public class Sphere : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if (other.gameObject.layer == 7)
         {
-            Camera cam = cams.GetComponent<Camera>();
+            CameraManager cam = cams.GetComponent<CameraManager>();
             Debug.Log("여기는 들어오긴함");
             cam.Anim();
         }
