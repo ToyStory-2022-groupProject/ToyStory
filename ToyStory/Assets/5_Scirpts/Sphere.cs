@@ -7,7 +7,10 @@ public class Sphere : MonoBehaviour
 {
     float h;
     float v;
+    
     Vector3 sphere;
+    Vector3 currentSpeed;
+    
     public float speed;
     public bool isMenu;
     
@@ -16,12 +19,12 @@ public class Sphere : MonoBehaviour
     float wDown;
     public GameObject cams;
     Rigidbody _rigidbody;
-    UIManager _uiManager;
+    UIManager _mainManager;
     
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _uiManager = GameObject.Find("GameUI").GetComponent<UIManager>();
+        _mainManager = GameObject.Find("GameUI").GetComponent<UIManager>();
     }
 
     void Update()
@@ -48,11 +51,15 @@ public class Sphere : MonoBehaviour
 
     void Menu()
     {
-        Debug.Log(_uiManager.isSub);
-        if (!_uiManager.isSub)
+        Debug.Log(_mainManager.isSub);
+        if (!_mainManager.isSub)
+        {
             speed = 100;
+        }
         else
+        {
             speed = 0;
+        }
     }
 
     void FixedUpdate()

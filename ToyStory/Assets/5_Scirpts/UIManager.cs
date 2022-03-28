@@ -6,15 +6,23 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject initUi;
     public GameObject mainUi;
     public GameObject player;
-    public GameObject menu_camera;
-    public GameObject game_camera;
+    public GameObject menuCamera;
+    public GameObject gameCamera;
     public GameObject subMenu;
-    Sphere sphere;
+    public GameObject settingMenu;
+    public GameObject display;
+    public GameObject sound;
+    public GameObject keySetting;
     
+    
+
     public bool isSub;
-    
+    bool isMain;
+    bool isSetting;
+
     void Update()
     {
         OpenSub();
@@ -23,10 +31,11 @@ public class UIManager : MonoBehaviour
     public void GameStart()
     {
         player.SetActive(true);
-        menu_camera.SetActive(false);
-        mainUi.SetActive(false);
-        game_camera.SetActive(true);
+        menuCamera.SetActive(false);
+        gameCamera.SetActive(true);
+        initUi.SetActive(false);
         isSub = false;
+        isMain = true;
     }
 
     public void GameExit()
@@ -35,28 +44,59 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
     
-    void OpenSub()
+    public void BackToMain()
     {
-        if (!isSub && Input.GetButtonDown("Cancel"))
-        {
-            subMenu.SetActive(true);
-            isSub = !isSub;
-        }
-        else if (isSub && Input.GetButtonDown("Cancel"))
-        {
-            subMenu.SetActive(false);
-            isSub = !isSub;
-        } 
+        subMenu.SetActive(false);
+        initUi = mainUi;
+        initUi.SetActive(true);
+        isMain = false;
     }
     
-    void OnMenu()
+    void OpenSub()
     {
-        Sphere sphere = GetComponent<Sphere>();
-        //sphere.move.velocity = Vector3.zero;
+        if (!isSub && Input.GetButtonDown("Cancel") && isMain)
+        {
+            SubOn();
+        }
+        else if (isSub && Input.GetButtonDown("Cancel") && isMain)
+        {
+            if (isSetting)
+            {
+                SettingOff();
+                Debug.Log("여기 들어왔다.");
+            }
+            else
+                SubOff();
+        } 
     }
 
-    void OffMenu()
+    void SubOn()
     {
-        
+        menuCamera.SetActive(true);
+        subMenu.SetActive(true);
+        isSub = !isSub;
     }
+
+    void SubOff()
+    {
+        menuCamera.SetActive(false);
+        subMenu.SetActive(false);
+        isSub = !isSub;
+    }
+
+    public void SettingOn()
+    {
+        subMenu.SetActive(false);
+        settingMenu.SetActive(true);
+        isSetting = true;
+    }
+
+    void SettingOff()
+    {
+        subMenu.SetActive(true);
+        settingMenu.SetActive(false);   
+        isSetting = false;
+    }
+
+
 }
