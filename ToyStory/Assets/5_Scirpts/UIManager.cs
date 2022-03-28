@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject menu_camera;
     public GameObject game_camera;
     public GameObject subMenu;
-    public Sphere sphere;
+    Sphere sphere;
     
     public bool isSub;
     
@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
         menu_camera.SetActive(false);
         mainUi.SetActive(false);
         game_camera.SetActive(true);
+        isSub = false;
     }
 
     public void GameExit()
@@ -38,16 +39,13 @@ public class UIManager : MonoBehaviour
     {
         if (!isSub && Input.GetButtonDown("Cancel"))
         {
-            subMenu.SetActive(false);
+            subMenu.SetActive(true);
             isSub = !isSub;
-            sphere.isMenu = false;
         }
         else if (isSub && Input.GetButtonDown("Cancel"))
         {
-            subMenu.SetActive(true);
+            subMenu.SetActive(false);
             isSub = !isSub;
-            sphere.isMenu = true;
-
         } 
     }
     
