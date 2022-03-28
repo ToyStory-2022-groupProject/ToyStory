@@ -7,41 +7,50 @@ public class Sphere : MonoBehaviour
 {
     float h;
     float v;
-    Rigidbody move;
     Vector3 sphere;
     public float speed;
+    public bool isMenu;
+    
     //public Camera cam;
     bool isBorder;
     float wDown;
     public GameObject cams;
-
+    Rigidbody move;
+    UIManager _uiManager;
+    
     void Awake()
     {
         move = GetComponent<Rigidbody>();
+        _uiManager = GameObject.Find("GameUI").GetComponent<UIManager>();
     }
 
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-    
-        sphere = new Vector3(h, 0, v).normalized;
+        Debug.Log(_uiManager.isSub);
+        if(_uiManager.isSub)
+            Move();
         Turn();
         transform.position += Vector3.zero;
         if(!isBorder)
              transform.position += sphere * Time.deltaTime * speed * (isBorder ? 0.3f : 1);
     }
 
+    void Move()
+    {
+        h = Input.GetAxisRaw("Horizontal");
+        v = Input.GetAxisRaw("Vertical");
+        sphere = new Vector3(h, 0, v).normalized;
+    }
     void Turn()
     {
         // 키보드에 의한 회전
         transform.LookAt(transform.position + sphere);
         
     }
-    
+
     void FixedUpdate()
     {
-        StopToWall();
+        StopToWall(); 
     }
 
     void StopToWall()
