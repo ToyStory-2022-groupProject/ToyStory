@@ -16,10 +16,13 @@ C:/Users/엄지민/Documents/GitHub/ToyStory/ToyStory
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 4899
 Successfully changed project path to: C:/Users/엄지민/Documents/GitHub/ToyStory/ToyStory
 C:/Users/엄지민/Documents/GitHub/ToyStory/ToyStory
 =======
+=======
+>>>>>>> Stashed changes
 49773
 Successfully changed project path to: /Users/hanseong-il/GitHub/ToyStory/ToyStory
 /Users/hanseong-il/GitHub/ToyStory/ToyStory
@@ -54,7 +57,11 @@ Successfully changed project path to: /Users/hanseong-il/GitHub/ToyStory/ToyStor
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Refreshing native plugins compatible for Editor in 97.46 ms, found 3 plugins.
+=======
+Refreshing native plugins compatible for Editor in 61.79 ms, found 2 plugins.
+>>>>>>> Stashed changes
 =======
 Refreshing native plugins compatible for Editor in 61.79 ms, found 2 plugins.
 >>>>>>> Stashed changes
@@ -126,8 +133,13 @@ Domain Reload Profiling:
 			SetupTypeCache (143ms)
 			ReleaseScriptCaches (0ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 			RebuildScriptCaches (37ms)
 			SetupLoadedEditorAssemblies (346ms)
+=======
+			RebuildScriptCaches (18ms)
+			SetupLoadedEditorAssemblies (159ms)
+>>>>>>> Stashed changes
 =======
 			RebuildScriptCaches (18ms)
 			SetupLoadedEditorAssemblies (159ms)
@@ -136,7 +148,11 @@ Domain Reload Profiling:
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				RefreshPlugins (102ms)
+=======
+				RefreshPlugins (64ms)
+>>>>>>> Stashed changes
 =======
 				RefreshPlugins (64ms)
 >>>>>>> Stashed changes
@@ -150,7 +166,11 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Registered in 0.010842 seconds.
+=======
+Registered in 0.000888 seconds.
+>>>>>>> Stashed changes
 =======
 Registered in 0.000888 seconds.
 >>>>>>> Stashed changes
@@ -162,15 +182,21 @@ Refreshing native plugins compatible for Editor in 1.17 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - Completed reload, in  1.608 seconds
 Domain Reload Profiling:
 	ReloadAssembly (1609ms)
 		BeginReloadAssembly (195ms)
 =======
+=======
+>>>>>>> Stashed changes
 - Completed reload, in  0.514 seconds
 Domain Reload Profiling:
 	ReloadAssembly (515ms)
 		BeginReloadAssembly (49ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (9ms)
@@ -234,6 +260,9 @@ Unloading 3220 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 23 unused Assets / (95.9 KB). Loaded Objects now: 3681.
 Memory consumption went from 219.9 MB to 219.8 MB.
 Total: 2.059708 ms (FindLiveObjects: 0.094292 ms CreateObjectMapping: 0.036583 ms MarkObjects: 1.863833 ms  DeleteObjects: 0.064334 ms)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -248,6 +277,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   Time since last request: 60946.508914 seconds.
   path: Assets/7_Prefabs/Player.prefab
@@ -2058,6 +2088,62 @@ Received Import Request.
 Start importing Assets/6_Sprite/Fonts using Guid(8c2f9f47fc5994507926c7a823dcb9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9396d5eb5dbd5303198283b3b73a0ed8') in 0.000404 seconds 
 ========================================================================
 Received Import Request.
+=======
+  Time since last request: 9695.748779 seconds.
+  path: Assets/3_Animation/Main Camera (1).controller
+  artifactKey: Guid(7c5e1aa794bf84311bd12acb8550e7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3_Animation/Main Camera (1).controller using Guid(7c5e1aa794bf84311bd12acb8550e7db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa4a93f33af673869c465448998da293') in 0.404389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000629 seconds.
+  path: Assets/6_Sprite
+  artifactKey: Guid(7f81e94dec8c84f6eb8506406a5c7538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/6_Sprite using Guid(7f81e94dec8c84f6eb8506406a5c7538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5480ca0f8dda3cab37de74a5e450e1d8') in 0.000478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001435 seconds.
+  path: Assets/3_Animation
+  artifactKey: Guid(bbc7db7e211fb4e569b5e09a0b49d320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3_Animation using Guid(bbc7db7e211fb4e569b5e09a0b49d320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a8ea271c22c56ff75466f7bb05eb86') in 0.000450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/3_Animation/ButtonZoomIn.anim
+  artifactKey: Guid(39e1536367dfe4a7f99d2ca5a015f8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3_Animation/ButtonZoomIn.anim using Guid(39e1536367dfe4a7f99d2ca5a015f8d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe54742e8594e12df393a01f99d5d4dd') in 0.025966 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/3_Animation/ButtonZoomOut.anim
+  artifactKey: Guid(f785cc427823e4605b6ea90212890cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3_Animation/ButtonZoomOut.anim using Guid(f785cc427823e4605b6ea90212890cf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10dbab9c0bf700a90a1afddf546ddbe9') in 0.001074 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/1_Scenes
+  artifactKey: Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1_Scenes using Guid(6ea315d0fd7389c41b19996891e99ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9772ea65184187e56158e707dc0f364a') in 0.000540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000974 seconds.
+  path: Assets/1_Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/1_Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a37daec213dbbce7d4c5f5f26239d55') in 0.000543 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000567 seconds.
+  path: Assets/3_Animation/CameraMove.anim
+  artifactKey: Guid(9e8d3f7d5bf0f4e81864c584945b9fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3_Animation/CameraMove.anim using Guid(9e8d3f7d5bf0f4e81864c584945b9fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aeb2279f87c215a304d8748fdc8d7bd') in 0.001016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000134 seconds.
+  path: Assets/6_Sprite/Fonts
+  artifactKey: Guid(8c2f9f47fc5994507926c7a823dcb9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/6_Sprite/Fonts using Guid(8c2f9f47fc5994507926c7a823dcb9ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9396d5eb5dbd5303198283b3b73a0ed8') in 0.000404 seconds 
+========================================================================
+Received Import Request.
+>>>>>>> Stashed changes
   Time since last request: 0.000043 seconds.
   path: Assets/5_Scirpts/UIManager.cs
   artifactKey: Guid(9f1d5eb67a3ee4db480807b782ed4df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -2074,4 +2160,7 @@ Received Import Request.
   path: Assets/3_Animation/Button.controller
   artifactKey: Guid(84653f9d6c0724f559f4edf32be74bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/3_Animation/Button.controller using Guid(84653f9d6c0724f559f4edf32be74bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '363057126f3f302d5cc2f8a8f21cc170') in 0.001272 seconds 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
