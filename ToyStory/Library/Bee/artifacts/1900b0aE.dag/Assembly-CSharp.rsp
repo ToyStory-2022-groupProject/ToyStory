@@ -346,8 +346,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/5_Scirpts/ButtonManager.cs"
 "Assets/5_Scirpts/CameraManager.cs"
+"Assets/5_Scirpts/PlayerController.cs"
 "Assets/5_Scirpts/Sphere.cs"
 "Assets/5_Scirpts/UIManager.cs"
+"Assets/Supercyan Character Pack Free Sample/Scripts/DemoFree.cs"
+"Assets/Supercyan Character Pack Free Sample/Scripts/FreeCameraLogic.cs"
+"Assets/Supercyan Character Pack Free Sample/Scripts/SimpleSampleCharacterControl.cs"
 -langversion:9.0
 
 /deterministic
