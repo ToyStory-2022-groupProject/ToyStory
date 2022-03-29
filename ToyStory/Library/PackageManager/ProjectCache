@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835633250000000
+      ticks: 637835636540000000
     m_Hash: 385205328
   m_LockFileStatus:
     m_FilePath: /Users/hanseong-il/GitHub/ToyStory/ToyStory/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835633270000000
+      ticks: 637835636540000000
     m_Hash: 410205889
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
