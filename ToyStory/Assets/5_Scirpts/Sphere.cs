@@ -24,12 +24,12 @@ public class Sphere : MonoBehaviour
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _mainManager = GameObject.Find("GameUI").GetComponent<UIManager>();
+        //_mainManager = GameObject.Find("GameUI").GetComponent<UIManager>();
     }
 
     void Update()
     {
-        Menu();
+        //Menu();
         Move();
         Turn();
     }

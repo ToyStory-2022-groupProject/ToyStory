@@ -8,9 +8,9 @@ public class UIManager : MonoBehaviour
 {
     public GameObject initUi;
     public GameObject mainUi;
-    public GameObject player;
+    //public GameObject player;
     public GameObject menuCamera;
-    public GameObject gameCamera;
+    //public GameObject gameCamera;
     public GameObject subMenu;
     public GameObject settingMenu;
     public GameObject display;
@@ -30,12 +30,13 @@ public class UIManager : MonoBehaviour
     
     public void GameStart()
     {
-        player.SetActive(true);
-        menuCamera.SetActive(false);
-        gameCamera.SetActive(true);
-        initUi.SetActive(false);
-        isSub = false;
-        isMain = true;
+        LoadingSceneController.Instance.LoadScene("SphereTest");
+        //player.SetActive(true);
+        // menuCamera.SetActive(false);
+        //gameCamera.SetActive(true);
+        // initUi.SetActive(false);
+        // isSub = false;
+        // isMain = true;
     }
 
     public void GameExit()
