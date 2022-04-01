@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835636540000000
-    m_Hash: 385205328
+      ticks: 637844209500000000
+    m_Hash: 3530190566
   m_LockFileStatus:
     m_FilePath: /Users/hanseong-il/GitHub/ToyStory/ToyStory/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637835636540000000
-    m_Hash: 410205889
+      ticks: 637844209500000000
+    m_Hash: 976734763
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,57 @@ m_LocalPackages:
 m_ProjectPath: /Users/hanseong-il/GitHub/ToyStory/ToyStory/Packages
 m_EditorVersion: 2021.2.14f1 (bcb93e5482d2)
 m_ResolvedPackages:
+- packageId: com.unity.2d.sprite@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: /Users/hanseong-il/GitHub/ToyStory/ToyStory/Library/PackageCache/com.unity.2d.sprite@1.0.0
+  assetPath: Packages/com.unity.2d.sprite
+  name: com.unity.2d.sprite
+  displayName: 2D Sprite
+  author:
+    name: 
+    email: 
+    url: 
+  category: 2D
+  type: 
+  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
+    like pivot, borders and Physics shape
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    verified: 1.0.0
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 2d
+  - sprite
+  - sprite editor window
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.15.12
   testable: 0
   isDirectDependency: 1
@@ -289,9 +340,11 @@ m_ResolvedPackages:
     - 3.0.9
     - 3.0.10
     - 3.0.12
+    - 3.0.13
     compatible:
     - 3.0.12
-    verified: 3.0.12
+    - 3.0.13
+    verified: 3.0.13
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -358,9 +411,11 @@ m_ResolvedPackages:
     - 2.0.11
     - 2.0.12
     - 2.0.14
+    - 2.0.15
     compatible:
     - 2.0.14
-    verified: 2.0.14
+    - 2.0.15
+    verified: 2.0.15
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -2976,6 +3031,7 @@ m_ResolvedPackages:
     - 1.2.0-exp.4
     - 1.2.0-exp.5
     - 1.2.0-exp.6
+    - 1.2.0-exp.7
     compatible:
     - 1.0.1
     - 1.1.0
@@ -2986,6 +3042,7 @@ m_ResolvedPackages:
     - 1.2.0-exp.4
     - 1.2.0-exp.5
     - 1.2.0-exp.6
+    - 1.2.0-exp.7
     verified: 1.0.1
   dependencies:
   - name: com.unity.test-framework
