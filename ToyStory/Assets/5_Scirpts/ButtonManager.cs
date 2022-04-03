@@ -2,29 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
-
-public class ButtonManager : MonoBehaviour
+public class ButtonManager : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    Animator _animator;
-    void Start()
-    {
-        _animator = GetComponent<Animator>();
-    }
+    public Text btnText;
 
-    void Update()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        //Debug.Log(EventSystem.current.IsPointerOverGameObject());
+        btnText.color = Color.gray;
     }
-
-    public void ZoomOut()
+    
+    public void OnPointerUp (PointerEventData eventData)
     {
-        _animator.SetTrigger("isExit");
+        btnText.color = Color.black;
     }
-
-    public void ZoomIn()
-    {
-        _animator.SetTrigger("isOver");
-    }
+    
 }

@@ -5,35 +5,35 @@ using UnityEngine;
 
 public class Sphere : MonoBehaviour
 {
+    
+    public GameObject cams;
+    Vector3 sphere;
+    Vector3 currentSpeed;
+    Rigidbody _rigidbody;
+    
+    public float speed;
     float h;
     float v;
     
-    Vector3 sphere;
-    Vector3 currentSpeed;
-    
-    public float speed;
-    public bool isMenu;
-    
-    //public Camera cam;
     bool isBorder;
-    float wDown;
-    public GameObject cams;
-    Rigidbody _rigidbody;
-    UIManager _mainManager;
-    
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        //_mainManager = GameObject.Find("GameUI").GetComponent<UIManager>();
     }
 
     void Update()
     {
-        //Menu();
+        Pause();
+        Menu();
         Move();
         Turn();
     }
 
+    void Pause() // 게임 정지
+    {
+        var obj = FindObjectOfType<SubUI>();
+        Time.timeScale = (obj == null) ? 1 : 0;
+    }
     void Move()
     {
         h = Input.GetAxisRaw("Horizontal");
@@ -51,14 +51,9 @@ public class Sphere : MonoBehaviour
 
     void Menu()
     {
-        Debug.Log(_mainManager.isSub);
-        if (!_mainManager.isSub)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            speed = 100;
-        }
-        else
-        {
-            speed = 0;
+            SubUI.Instance.LoadSubMenu();
         }
     }
 
