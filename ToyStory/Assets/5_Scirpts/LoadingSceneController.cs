@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
+using System.IO;
 
 
 public class LoadingSceneController : MonoBehaviour
@@ -29,7 +30,10 @@ public class LoadingSceneController : MonoBehaviour
 
     [SerializeField] Image progressBar;
     [SerializeField] CanvasGroup canvasGroup;
-
+    [SerializeField] Text tip;
+    
+    int ran;
+    string[] tips;
     string loadSceneName;
     bool isWait;
     static LoadingSceneController Create()
@@ -40,6 +44,10 @@ public class LoadingSceneController : MonoBehaviour
     
     void Awake()
     {
+        string path = Application.dataPath;
+        path += "/6_Sprite/sample.txt";
+        tips = File.ReadAllLines(path);
+        
         if (Instance != this)
         {
             Destroy(gameObject);
@@ -51,10 +59,10 @@ public class LoadingSceneController : MonoBehaviour
     public void LoadScene(string sceneName) // 씬 불러오는 함수
     {
         gameObject.SetActive(true);
+        TipChange();
         SceneManager.sceneLoaded += LoadSceneEnd;
         loadSceneName = sceneName;
         StartCoroutine(Load());
-
     }
 
     IEnumerator Load()
@@ -70,7 +78,7 @@ public class LoadingSceneController : MonoBehaviour
         {
             yield return null;
 
-            timer += Time.unscaledTime * 0.001f; // 수정
+            timer += Time.unscaledTime * 0.01f; // 수정
             if (progressBar.fillAmount < 0.9f)
             {
                 progressBar.fillAmount = Mathf.Lerp(0, async.progress, timer);
@@ -96,7 +104,7 @@ public class LoadingSceneController : MonoBehaviour
         while (timer <= 1f)
         {
             yield return null;
-            timer += Time.unscaledTime * 0.001f; // 이 부분 나중에 수정
+            timer += Time.unscaledTime * 1f; // 이 부분 나중에 수정
             canvasGroup.alpha = Mathf.Lerp(isFadeIn ? 0 : 1, isFadeIn ? 1 : 0, timer);
 
         }
@@ -114,5 +122,11 @@ public class LoadingSceneController : MonoBehaviour
             StartCoroutine(Fade(false));
             SceneManager.sceneLoaded -= LoadSceneEnd;
         }
+    }
+    
+    void TipChange()
+    {
+        ran = UnityEngine.Random.Range(0, tips.Length);
+        tip.text = string.Format("Tip : " + tips[ran]);
     }
 }
