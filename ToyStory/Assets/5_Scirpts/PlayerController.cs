@@ -4,7 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Rigidbody))]
-
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float walkspeed;
@@ -20,19 +19,19 @@ public class PlayerController : MonoBehaviour
     {
      if(Input.GetKey(KeySetting.keys[KeyAction.Left]))   
      {
-        Debug.Log("left");
+
      }
-     else if(Input.GetKey(KeySetting.keys[KeyAction.Right]))   
+     else if(Input.GetKey(KeySetting.keys[KeyAction.Left]))   
      {
-         Debug.Log("Right");
+         
      }
-     if(Input.GetKey(KeySetting.keys[KeyAction.Walk]))   
+     if(Input.GetKey(KeySetting.keys[KeyAction.Left]))   
      {
-         Debug.Log("Walk");
+         
      }
-     if(Input.GetKey(KeySetting.keys[KeyAction.Jump]))   
+     if(Input.GetKey(KeySetting.keys[KeyAction.Left]))   
      {
-         Debug.Log("Jump");
+         
      }
     }
 }
