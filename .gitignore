@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# 에셋스토어에서 구매한 에셋들 제외
+/[Aa]ssets/_AssetStore/*
+!/[Aa]ssets/_AssetStore/.gitkeep
+ToyStory/Library/ArtifactDB
+
