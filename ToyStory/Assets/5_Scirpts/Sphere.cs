@@ -7,26 +7,26 @@ public class Sphere : MonoBehaviour
 {
     
     public GameObject cams;
-    Vector3 sphere;
-    Vector3 currentSpeed;
-    Rigidbody _rigidbody;
+    // Vector3 sphere;
+    // Vector3 currentSpeed;
+    // Rigidbody _rigidbody;
     
-    public float speed;
-    float h;
-    float v;
+    // public float speed;
+    // float h;
+    // float v;
     
-    bool isBorder;
-    void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
+    // bool isBorder;
+    // void Awake()
+    // {
+    //     _rigidbody = GetComponent<Rigidbody>();
+    // }
 
     void Update()
     {
         Pause();
         Menu();
-        Move();
-        Turn();
+        // Move();
+        // Turn();
     }
 
     void Pause() // 게임 정지
@@ -34,20 +34,20 @@ public class Sphere : MonoBehaviour
         var obj = FindObjectOfType<SubUI>();
         Time.timeScale = (obj == null) ? 1 : 0;
     }
-    void Move()
-    {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        sphere = new Vector3(h, 0, v).normalized;
-        if(!isBorder)
-            transform.position += sphere * Time.deltaTime * speed * (isBorder ? 0.3f : 1);
-    }
-    void Turn()
-    {
-        // 키보드에 의한 회전
-        transform.LookAt(transform.position + sphere);
+    // void Move()
+    // {
+    //     h = Input.GetAxisRaw("Horizontal");
+    //     v = Input.GetAxisRaw("Vertical");
+    //     sphere = new Vector3(h, 0, v).normalized;
+    //     if(!isBorder)
+    //         transform.position += sphere * Time.deltaTime * speed * (isBorder ? 0.3f : 1);
+    // }
+    // void Turn()
+    // {
+    //     // 키보드에 의한 회전
+    //     transform.LookAt(transform.position + sphere);
         
-    }
+    // }
 
     void Menu()
     {
@@ -57,17 +57,17 @@ public class Sphere : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        StopToWall(); 
-    }
+    // void FixedUpdate()
+    // {
+    //     StopToWall(); 
+    // }
 
-    void StopToWall()
-    {
-        Debug.DrawRay(transform.position, transform.forward * 15,  Color.magenta);
-        isBorder = Physics.Raycast(transform.position,
-            transform.forward, 15, LayerMask.GetMask("Wall"));
-    }
+    // void StopToWall()
+    // {
+    //     Debug.DrawRay(transform.position, transform.forward * 15,  Color.magenta);
+    //     isBorder = Physics.Raycast(transform.position,
+    //         transform.forward, 15, LayerMask.GetMask("Wall"));
+    // }
 
     void OnTriggerEnter(Collider other)
     {
@@ -75,7 +75,6 @@ public class Sphere : MonoBehaviour
         if (other.gameObject.layer == 7)
         {
             CameraManager cam = cams.GetComponent<CameraManager>();
-            Debug.Log("여기는 들어오긴함");
             cam.Anim();
         }
     }

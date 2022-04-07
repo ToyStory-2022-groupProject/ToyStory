@@ -42,7 +42,7 @@ public class SubUI : MonoBehaviour
         return Instantiate(Sub);
     }
     
-    public void LoadSubMenu() // 씬 불러오는 함수
+    public void LoadSubMenu()
     {
         gameObject.SetActive(true);
     }

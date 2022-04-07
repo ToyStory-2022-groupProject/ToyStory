@@ -26,7 +26,7 @@ public class MainUI : MonoBehaviour
 
     public void StartGame()
     {
-        LoadingSceneController.Instance.LoadScene("SphereTest");
+        LoadingSceneController.Instance.LoadScene("InGame");
         PlayerPrefs.SetInt("Save", 0);
     }
     
