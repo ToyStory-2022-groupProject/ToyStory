@@ -11,6 +11,6 @@ public class KeyManager : MonoBehaviour
     void Awake()
     {
         for(int i = 0; i<(int)KeyAction.KeyCount; i++)
-            KeySetting.keys.Add((KeyAction)i, defaultKeys[i]);
+            KeySetting.keys.Add((KeyAction) i, defaultKeys[i]);
     }
 }

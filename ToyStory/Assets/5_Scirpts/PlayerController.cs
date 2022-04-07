@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!anim.IsInTransition(0)) // 현재 트랜지션이 수행 중이지 않다면
             {
-                rb.AddForce(Vector3.up * jumpPower);
+                rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
                 anim.SetBool("Jump", true); // 점프
             }
         } 
