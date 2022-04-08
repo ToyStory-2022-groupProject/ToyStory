@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 0.1f;
     [SerializeField] float walkSpeed = 0;
     [SerializeField] float runSpeed = 1.0f;
-    [SerializeField] float jumpPower = 3.0f;
+    [SerializeField] float jumpPower = 1.0f;
     private CapsuleCollider col;
     private Rigidbody rb;
     private Animator anim;
@@ -61,11 +61,11 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Move", false);
 
 
-        if (Input.GetKeyDown(KeySetting.keys[KeyAction.JUMP])) // 점프키를 누르면
+        if (Input.GetKey(KeySetting.keys[KeyAction.JUMP])) // 점프키를 누르면
         {
             if (!anim.IsInTransition(0)) // 현재 트랜지션이 수행 중이지 않다면
             {
-                rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
+                rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
                 anim.SetBool("Jump", true); // 점프
             }
         } 
